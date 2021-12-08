@@ -7,6 +7,6 @@ const γ = input.reduce((acc, val) => {
     return acc;
 }, [])
 .map(counter => Object.keys(counter).reduce((i,j) => counter[i]>=counter[j] ? i : j))
-.reduce((acc, val) => acc + val, '')
+.reduce((acc, val) => acc + val, '');
 const ε = Array.from(γ).reduce((acc, i) => acc + (1 - parseInt(i, 10)), '');
 parseInt(γ, 2) * parseInt(ε, 2);
