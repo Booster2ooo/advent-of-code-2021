@@ -10,7 +10,7 @@ const grids = input.filter((val, i) => i && !!val).reduce((acc, val, i) => {
   }
   return acc;
 }, []);
-let findWinner = (grid) => {
+const findWinner = (grid) => {
   let winner;
   for (let i = 0; i < 5; i++) {
     const line = grid.slice(i * 5, i * 5 + 5);
