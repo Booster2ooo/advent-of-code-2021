@@ -1,3 +1,4 @@
+const input = document.body.textContent.split('\n');
 const data = input.reduce((acc, val) => {
     let [move, amount] = val.split(' ');
     amount = parseInt(amount, 10);
