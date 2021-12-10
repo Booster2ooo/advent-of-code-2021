@@ -1,3 +1,4 @@
+const input = document.body.textContent.split('\n');
 const numbers = input[0].split(',').map(val => parseInt(val, 10));
 const grids = input.filter((val, i) => i && !!val).reduce((acc, val, i) => {
   const gIndex = Math.floor(i / 5);
