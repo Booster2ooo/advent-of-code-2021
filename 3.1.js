@@ -1,3 +1,4 @@
+const input = document.body.textContent.split('\n');
 const γ = input.reduce((acc, val) => {
     Array.from(val).forEach((bit, i) => {
 	    acc[i] = acc[i] || {};
