@@ -10,7 +10,7 @@ const grids = input.filter((val, i) => i && !!val).reduce((acc, val, i) => {
   }
   return acc;
 }, []);
-const findWinner = (grid) => {
+const bingo = (grid) => {
   let winner;
   for (let i = 0; i < 5; i++) {
     const line = grid.slice(i * 5, i * 5 + 5);
@@ -33,9 +33,11 @@ for (let num of numbers) {
     const cell = grid.find(c => c.number === num);
     if (cell) {
       cell.marked = 1;
-      winner = findWinner(grid);
+      if (bingo(grid)) {
+        winner = grid;
+        break;
+      }
     }
-    if (winner) break;
   }
   if (winner) {
     score = winner.filter(cell => !cell.marked).map(cell => cell.number).reduce((acc, val) => acc + val, 0) * num;
