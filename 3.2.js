@@ -1,3 +1,4 @@
+const input = document.body.textContent.split('\n');
 const filter = (arr, pos, bit) => {
   const counters = arr.map(val => parseInt(val[pos], 10)).reduce((acc, val) => {
 	  acc[val]++;
